@@ -7,6 +7,9 @@ function Sidebar({
   activeNote,
   setActiveNote
 }) {
+
+  const sortedNotes = notes.sort((a, b) => b.modDate - a.modDate)
+
   return (
     <div className="w-[30%] h-screen border-r">
       <div className="flex justify-between p-6">
@@ -19,7 +22,7 @@ function Sidebar({
         </button>
       </div>
       <div className="h-[100vh - 78px] overflow-y-scroll">
-        {notes.map(({ id, title, content, modDate }) => (
+        {sortedNotes.map(({ id, title, content, modDate }) => (
           <div
             className={`p-6 hover:bg-gray-200 transition-all ${
               activeNote === id && 'bg-gray-200'
