@@ -21,6 +21,7 @@ function Sidebar({
           追加
         </button>
       </div>
+
       <div className="h-[100vh - 78px] overflow-y-scroll">
         {sortedNotes.map(({ id, title, content, modDate }) => (
           <div
@@ -31,7 +32,7 @@ function Sidebar({
             onClick={() => setActiveNote(id)}
           >
             <div className="flex justify-between">
-              <strong>{title}</strong>
+              <strong>{title ? title : "新しいノート"}</strong>
               <button onClick={() => onDeleteNote(id)}>削除</button>
             </div>
             <p className="my-2.5">{content}</p>
