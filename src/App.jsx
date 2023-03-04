@@ -40,7 +40,7 @@ function App() {
   }
 
   return (
-    <div className="App w-full h-screen overflow-hidden text-base flex bg-blue-50">
+    <div className="App w-full h-screen overflow-hidden flex bg-blue-50">
       <Sidebar
         onAddNote={onAddNote}
         notes={notes}

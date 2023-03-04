@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
 function Main({ activeNote, onUpdateNote }) {
   const onEditNote = (key, value) => {
@@ -36,8 +37,8 @@ function Main({ activeNote, onUpdateNote }) {
         ></textarea>
       </div>
       <div className="h-1/2 bg-pink-50 overflow-y-scroll border-t">
-        <h1 className="pt-6 px-6 mb-6">{activeNote.title}</h1>
-        <div className="px-6 ">{activeNote.content}</div>
+        <h1 className="pt-6 px-6 mb-6 text-base font-normal">{activeNote.title}</h1>
+        <ReactMarkdown className="px-6">{activeNote.content}</ReactMarkdown>
       </div>
     </div>
   )
