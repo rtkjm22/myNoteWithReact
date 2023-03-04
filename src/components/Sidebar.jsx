@@ -21,7 +21,9 @@ function Sidebar({
       <div className="h-[100vh - 78px] overflow-y-scroll">
         {notes.map(({ id, title, content, modDate }) => (
           <div
-            className={`p-6 hover:bg-gray-200 transition-all ${activeNote === id && "bg-gray-200"}`}
+            className={`p-6 hover:bg-gray-200 transition-all ${
+              activeNote === id && 'bg-gray-200'
+            }`}
             key={id}
             onClick={() => setActiveNote(id)}
           >
